@@ -35,3 +35,8 @@ function getMaxStackSize() {
 }
 // Call and log max stack size
 getMaxStackSize();
+
+// Defers execution with setTimeout and trampoline to handle stack overflow
+function trampoline(fn) {
+  setTimeout(fn, 0);
+}
