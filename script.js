@@ -47,3 +47,7 @@ try {
 } catch (err) {
   console.error("Error:", err);
 }
+
+// Create HTML element to hold text
+const textElement = document.createElement("div");
+document.body.appendChild(textElement);
