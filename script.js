@@ -17,3 +17,21 @@ function incrementAndCall() {
     }, 0);
   }
 }
+
+// Calculates max call stack size
+function getMaxStackSize() {
+  let count = 0;
+
+  function recursFunc() {
+    count++;
+    try {
+      recursFunc();
+    } catch (err) {
+      console.log("Max call stack size:", count);
+    }
+  }
+
+  recursFunc();
+}
+// Call and log max stack size
+getMaxStackSize();
