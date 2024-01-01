@@ -40,3 +40,10 @@ getMaxStackSize();
 function trampoline(fn) {
   setTimeout(fn, 0);
 }
+
+// Call func within try/catch block
+try {
+  incrementAndCall();
+} catch (err) {
+  console.error("Error:", err);
+}
